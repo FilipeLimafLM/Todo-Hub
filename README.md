@@ -1,0 +1,2 @@
+O projeto Todo-Hub visa criar uma aplicação web intuitiva e eficiente para gerenciar listas de tarefas. O foco principal é oferecer aos usuários uma ferramenta prática e personalizável para organizar suas atividades diárias, promovendo produtividade e facilidade na gestão de suas responsabilidades.
+Contém alguns erros a serem resolvidos ainda, como problema no input de texto das tarefas, também na adição de tarefas, precisando colocar uma quebra de linha para melhor organização das listas.
