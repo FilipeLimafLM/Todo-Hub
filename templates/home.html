@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
+    <title>Bem-vindo ao Hub!</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+
+</head>
+<body>
+    <div class="card-top" >
+        <img class="imglogin" src="/static/img/Logo.PNG" action="click">
+    </div>
+
+    <h1>SEJA BEM VINDO!</h1>
+    <p>Sinta-se a vontade para começar a gerenciar suas atividades.</p>
+
+    <form  class="input-container" method="POST" >
+
+     <div>
+        <label for="title">Adicionar Tarefa</label>
+        <input type="text" name="todo_name" placeholder="Sua tarefa..." id="input-todo" >
+        <button type="submit" id="add-todo">+</button>
+     </div>
+    </form> 
+    <h2>Tarefas</h2>
+    <div class="todo-container"  >
+        {% for item in items %}
+        <div class="todo">
+            <p>{{ item.name }}</p>
+            <input class="text" type="text" id="text"  >
+            <div class="actions">
+                <form action="{{url_for('checked_todo', todo_id = item.id)}}" method="POST">
+                    <input type="checkbox" {% if item.checked%}checked{% endif %} onchange ="this.form.submit()">
+                </form>
+                <form action="{{url_for('delete_todo', todo_id =item.id)}}" method="POST">
+                    <button>Delete</button>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</body>
+</html>

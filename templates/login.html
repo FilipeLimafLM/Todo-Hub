@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
+    <title>To-doHub</title>
+
+
+
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+</head>
+<body>
+    <form class="form" action="/login" method="post"> 
+        <div class="card">
+            <div class="card-top">
+                <img class="imglogin" src="/static/img/Logo.PNG" alt="">
+                <h2 class="titulo">Entre aqui</h2>
+                <p>Gerencie sua agenda</p>
+            </div>
+            <div class="card-group">
+                <label>Digite seu login</label>
+                <input type="text" name="nome" placeholder="Login" id="login">
+            </div>
+            <div class="card-group">
+                <label>Digite sua senha</label>
+                <input type="password" name="senha" placeholder="Senha" id="senha">
+            </div>
+            <div class="card-group">
+                <label><a href="cadastro">Crie uma conta</a></label>
+            </div>
+            <div class="card-group btn">
+                <button type="submit" onclick="logar()">Entrar</button>
+            </div>
+            <div class="card-right">
+                <img class ="imgLogo" src="">
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
